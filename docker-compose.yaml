@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  postgres:
+    container_name: test_postgres
+    image: postgres:11.1-alpine
+    environment:
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: test
+    volumes:
+      - ~/storage/test/postgres:/data/postgres
+    ports:
+      - "5436:5432"
+    networks:
+      - test
+    restart: always
+
+  postgres_test:
+    container_name: test_postgres_test
+    image: postgres:11.1-alpine
+    environment:
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: test_test
+    volumes:
+      - ~/storage/test/postgres:/data/postgres
+    ports:
+      - "5437:5432"
+    networks:
+      - test
+    restart: always
+
+networks:
+  test:
+    driver: bridge
