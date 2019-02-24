@@ -1,0 +1,27 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 1
+      author: rafaelreis
+      changes:
+        - createTable:
+            tableName: airport
+            columns:
+              - column:
+                  name: iata
+                  type: varchar(3)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: icao
+                  type: varchar(4)
+              - column:
+                  name: name
+                  type: varchar(255)
+              - column:
+                  name: city
+                  type: varchar(255)
+              - column:
+                  name: country
+                  type: varchar(255)
