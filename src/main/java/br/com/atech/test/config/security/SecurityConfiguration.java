@@ -39,6 +39,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 			.csrf().disable()
 			.authorizeRequests()
 			.antMatchers("/login").permitAll()
+			.antMatchers(
+	            "/v2/api-docs", 
+	            "/swagger-resources/**",  
+	            "/swagger-ui.html", 
+	            "/webjars/**" ,
+	            "/swagger.json")
+	        .permitAll()
 			.anyRequest().authenticated()
 			.and()
 			.addFilterBefore(jwtLoginFilter, UsernamePasswordAuthenticationFilter.class)
