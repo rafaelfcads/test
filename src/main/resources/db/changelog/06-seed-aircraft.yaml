@@ -1,0 +1,14 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 6
+      author: rafaelreis
+      changes:
+        - sql:
+            sql: insert into aircraft (serial_number, model) values ('1111111111', 'Phenom 100');
+              insert into aircraft (serial_number, model) values ('2222222222', 'Phenom 200');
+              insert into aircraft (serial_number, model) values ('3333333333', 'Phenom 300');
+              insert into aircraft (serial_number, model) values ('4444444444', 'ERJ-145');
+              insert into aircraft (serial_number, model) values ('5555555555', 'ERJ-135');
+        - rollback:
+            sql: delete from aircraft;

@@ -1,0 +1,12 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 7
+      author: rafaelreis
+      changes:
+        - sql:
+            sql: insert into pilot (brevete, first_name, last_name) values ('TAHAvj152W', 'Alberto', 'Santos Dumont');
+              insert into pilot (brevete, first_name, last_name) values ('YGJD5642JQ', 'Ozires', 'Silva');
+              insert into pilot (brevete, first_name, last_name) values ('LKHNJJ098C', 'Willian', 'E. Boeing');
+        - rollback:
+            sql: delete from pilot;

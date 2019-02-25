@@ -1,0 +1,17 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 5
+      author: rafaelreis
+      changes:
+        - sql:
+            sql: insert into airport (iata, icao, name, city, country) values ('GRU', 'SBGR', 'Guarulhos - Governador André Franco Montoro International', 'São Paulo', 'Brazil');
+              insert into airport (iata, icao, name, city, country) values ('CGH', 'SBSP', 'Congonhas', 'São Paulo', 'Brazil');
+              insert into airport (iata, icao, name, city, country) values ('VCP', 'SBKP', 'Viracopos International', 'Campinas', 'Brazil');
+              insert into airport (iata, icao, name, city, country) values ('CPQ', 'SDAM', 'Amarais', 'Campinas', 'Brazil');
+              insert into airport (iata, icao, name, city, country) values ('ATL', 'KATL', 'Hartsfield–Jackson Atlanta International Airport', 'Atlanta', 'United States');
+              insert into airport (iata, icao, name, city, country) values ('LAX', 'KLAX', 'Los Angeles International Airport', 'Los Angeles', 'United States');
+              insert into airport (iata, icao, name, city, country) values ('ORD', 'KORD', 'O Hare International Airport', 'Chicago', 'United States');
+              insert into airport (iata, icao, name, city, country) values ('DEN', 'KDEN', 'Denver International Airport', 'Denver', 'United States');
+        - rollback:
+            sql: delete from airport;

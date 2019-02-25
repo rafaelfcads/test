@@ -12,3 +12,15 @@ databaseChangeLog:
   - include:
       file: 04-create-flight.yaml
       relativeToChangelogFile: true
+  - include:
+      file: 05-seed-airport.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 06-seed-aircraft.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 07-seed-pilot.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 08-seed-flight.yaml
+      relativeToChangelogFile: true

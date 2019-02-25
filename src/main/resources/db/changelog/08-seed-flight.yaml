@@ -1,0 +1,11 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 8
+      author: rafaelreis
+      changes:
+        - sql:
+            sql: insert into flight (depart_date, arrive_date, aircraft, pilot, status, depart, arrive) values ('2019-02-24T09:30:00Z', '2019-02-24T23:00:00Z', '3333333333', 'TAHAvj152W', 'SCHEDULED', 'LAX', 'DEN');
+
+        - rollback:
+            sql: delete from flight;
