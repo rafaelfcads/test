@@ -9,3 +9,6 @@ databaseChangeLog:
   - include:
       file: 03-create-pilot.yaml
       relativeToChangelogFile: true
+  - include:
+      file: 04-create-flight.yaml
+      relativeToChangelogFile: true

@@ -1,0 +1,53 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 4
+      author: rafaelreis
+      changes:
+        - createTable:
+            tableName: flight
+            columns:
+              - column:
+                  name: id
+                  type: serial
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: depart_date
+                  type: TIMESTAMP
+              - column:
+                  name: arrive_date
+                  type: TIMESTAMP
+              - column:
+                  name: aircraft
+                  type: varchar(10)
+                  constraints:
+                    nullable: false
+                    foreignKeyName: aircraft_fk
+                    references: aircraft(serial_number)
+              - column:
+                  name: pilot
+                  type: varchar(10)
+                  constraints:
+                    nullable: false
+                    foreignKeyName: pilot_fk
+                    references: pilot(brevete)
+              - column:
+                  name: status
+                  type: varchar(20)
+              - column:
+                  name: depart
+                  type: varchar(3)
+                  constraints:
+                    nullable: false
+                    foreignKeyName: depart_airport_fk
+                    references: airport(iata)
+              - column:
+                  name: arrive
+                  type: varchar(3)
+                  constraints:
+                    nullable: false
+                    foreignKeyName: arrive_airport_fk
+                    references: airport(iata)
+
