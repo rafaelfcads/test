@@ -1,0 +1,21 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 3
+      author: rafaelreis
+      changes:
+        - createTable:
+            tableName: pilot
+            columns:
+              - column:
+                  name: brevete
+                  type: varchar(10)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: varchar(20)
+              - column:
+                  name: last_name
+                  type: varchar(50)
