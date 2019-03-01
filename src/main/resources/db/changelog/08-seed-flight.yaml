@@ -5,7 +5,7 @@ databaseChangeLog:
       author: rafaelreis
       changes:
         - sql:
-            sql: insert into flight (depart_date, arrive_date, aircraft, pilot, status, depart, arrive) values ('2019-02-24T09:30:00Z', '2019-02-24T23:00:00Z', '3333333333', 'TAHAvj152W', 'SCHEDULED', 'LAX', 'DEN');
-
+            sql: insert into flight (flight_code, depart_date, arrive_date, aircraft, pilot, status, depart, arrive) values ('qwertyuiop', '2016-02-24T09:30:00Z', '2017-02-24T23:00:00Z', '2222222222', 'TAHAvj152W', 'SCHEDULED', 'LAX', 'DEN');
+              insert into flight (flight_code, depart_date, arrive_date, aircraft, pilot, status, depart, arrive) values ('qazwsxedcr', '2019-02-24T09:30:00Z', '2019-02-24T23:00:00Z', '3333333333', 'TAHAvj152W', 'SCHEDULED', 'LAX', 'DEN');
         - rollback:
             sql: delete from flight;

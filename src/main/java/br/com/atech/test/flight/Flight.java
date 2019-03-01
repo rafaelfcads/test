@@ -13,17 +13,17 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import br.com.atech.test.aircraft.Aircraft;
+import br.com.atech.test.airport.Airport;
+import br.com.atech.test.pilot.Pilot;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import br.com.atech.test.airport.Airport;
-import br.com.atech.test.pilot.Pilot;
 
 @Entity
 @Data
-@EqualsAndHashCode(of = "id")
+@EqualsAndHashCode(of = "flightCode")
 @NoArgsConstructor
 @RequiredArgsConstructor
 public class Flight {
@@ -31,6 +31,10 @@ public class Flight {
     @Id
     @NonNull
     private Long id;
+    
+    @NonNull
+    @Column(name = "flight_code")
+    private String flightCode;
 
     @NonNull
     @Column(name = "depart_date")

@@ -34,7 +34,7 @@ public class JwtLoginFilter extends AbstractAuthenticationProcessingFilter {
 		
 		UserCredentials credentials = new ObjectMapper().readValue(inputStream, UserCredentials.class);
 		UsernamePasswordAuthenticationToken userPassToken = new UsernamePasswordAuthenticationToken(
-				credentials.getUsername(),
+				credentials.getEmail(),
 				credentials.getPassword(),
 				Collections.emptyList());
 		

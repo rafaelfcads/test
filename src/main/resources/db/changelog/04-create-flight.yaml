@@ -14,6 +14,9 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
+                  name: flight_code
+                  type: varchar(10)
+              - column:
                   name: depart_date
                   type: TIMESTAMP
               - column:

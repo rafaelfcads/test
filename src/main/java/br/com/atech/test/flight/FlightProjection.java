@@ -11,6 +11,8 @@ import java.util.Date;
 public interface FlightProjection {
 
     Long getId();
+    
+    String getFlightCode();
 
     Date getDepartDate();
 
