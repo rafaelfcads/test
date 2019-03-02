@@ -30,6 +30,4 @@ http://localhost:8081/swagger-ui.html
 
 ###In order to Get api token, to use the api services, you should to use the follow user:
 
-## /login
-
 user: test@test.com password: 123456
