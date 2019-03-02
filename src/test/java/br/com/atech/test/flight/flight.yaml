@@ -1,0 +1,14 @@
+config:
+  target: 'http://localhost:8081'
+  phases:
+    - duration: 60
+      arrivalRate: 20
+  defaults:
+    headers:
+      authorization: ' Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYWZhZWxmYy5hZHNAZ21haWwuY29tIiwiZXhwIjoxNTUxNTM3NTIzfQ.kBY79VYOvKt1hS4XPG6MtYc-GjN2RIcvTe2RlNafA4y6YhPJChCgkq-23H0XKMW-Da-im4loK5csWTdCPpAEMQ'
+scenarios:
+  - flow:
+    - get:
+        url: "/v1/flights"
+    - get:
+        url: "/v1/flights/search/by-flight-code?flightCode=q"
