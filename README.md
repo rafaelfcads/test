@@ -28,6 +28,6 @@ Run `artillery run pilot.yaml`
 
 http://localhost:8081/swagger-ui.html
 
-###In order to Get api token, to use the api services, you should to use the follow user:
+### In order to Get api token, to use the api services, you should to use the follow user:
 
 user: test@test.com password: 123456
